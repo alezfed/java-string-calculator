@@ -3,6 +3,7 @@ package com.epam.izh.rd.online.service;
 import com.epam.izh.rd.online.enity.Operation;
 import com.epam.izh.rd.online.enity.OperationType;
 import com.epam.izh.rd.online.exception.IllegalExpressionException;
+import com.epam.izh.rd.online.exception.UnknownOperationException;
 
 import java.util.ArrayDeque;
 import java.util.StringJoiner;
@@ -67,7 +68,7 @@ public class SimpleParsingService implements ParsingService {
             if (token.matches(ALL_OPERATION_AND_NUMBER_REGEX)) {
                 continue;
             }
-            throw new IllegalExpressionException("Неверное построение выражения или неизвестные операторы в нем.");
+            throw new UnknownOperationException("Неверное построение выражения или неизвестные операторы в нем.");
         }
         if (tokens[tokens.length - 1].matches(BIN_OPERATION_REGEX)) {
             throw new IllegalExpressionException("Выражение не может заканчиваться бинарной операцией.");

@@ -22,7 +22,7 @@ public class FactorialOperation extends Operation implements Calculable {
         double value = 1;
         for (int i=2; i<=args[0]; value*=i++);
         if (Double.isInfinite(value)) {
-            throw new ArithmeticException("Переполнение вещественного числа при операции деления.");
+            throw new ArithmeticException("Переполнение вещественного числа в функуии факториала.");
         }
         return value;
     }
