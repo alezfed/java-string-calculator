@@ -1,5 +1,7 @@
 package com.epam.izh.rd.online.service;
 
+import java.io.PrintStream;
+
 public class ConsoleNotificationService implements NotificationService {
     public static final String START = "Добро пожаловать в консольный калькулятор строковых выражений.\n";
     public static final String CHOICE = "\nВыберите действие, которое хотите выполнить:\n"
@@ -18,6 +20,14 @@ public class ConsoleNotificationService implements NotificationService {
     public static final String ERROR = "Ошибка: %s\n";
     public static final String ERROR_TEXT = "Неверая расстановка операций и их значений в выражении.\n";
     public static final String ANSWER_FORMAT = "#.#####";
+
+    public ConsoleNotificationService() {
+        System.setOut(System.out);
+    }
+
+    public ConsoleNotificationService(PrintStream printStream) {
+        System.setOut(printStream);
+    }
 
     @Override
     public void showMessage(String message, String... pasteText) {

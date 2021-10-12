@@ -1,7 +1,10 @@
 package com.epam.izh.rd.online.service;
 
+import lombok.AllArgsConstructor;
+
 import java.util.Scanner;
 
+@AllArgsConstructor
 public class ConsoleUserRequestService implements UserRequestService {
     private final Scanner scanner;
 

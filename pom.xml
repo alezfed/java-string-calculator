@@ -14,32 +14,43 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <maven.surefire.version>3.0.0-M3</maven.surefire.version>
+        <junit.jupiter.version>5.8.1</junit.jupiter.version>
+        <hamcrest.version>1.3</hamcrest.version>
+        <junit.utils.version>1.3.1</junit.utils.version>
+        <lombok.versiom>1.18.22</lombok.versiom>
+        <mockito.version>1.10.19</mockito.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.8.1</version>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
-            <version>1.3</version>
+            <version>${hamcrest.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>net.obvj</groupId>
             <artifactId>junit-utils</artifactId>
-            <version>1.3.1</version>
+            <version>${junit.utils.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>${lombok.versiom}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -57,11 +68,8 @@
                 <configuration>
                     <outputDirectory>target/jacoco-reports</outputDirectory>
                     <excludes>
-                        <exclude>com/epam/izh/rd/online/service/ConsoleNotificationService.*</exclude>
-                        <exclude>com/epam/izh/rd/online/service/ConsoleUserRequestService.*</exclude>
                         <exclude>com/epam/izh/rd/online/service/ProcessCalculateService.*</exclude>
                         <exclude>com/epam/izh/rd/online/Calculator.*</exclude>
-                        <exclude>com/epam/izh/rd/online/exception/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>

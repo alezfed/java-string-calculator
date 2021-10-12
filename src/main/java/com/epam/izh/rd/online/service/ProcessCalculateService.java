@@ -3,9 +3,11 @@ package com.epam.izh.rd.online.service;
 import com.epam.izh.rd.online.exception.IllegalExpressionException;
 import com.epam.izh.rd.online.exception.IllegalNumberArgumentException;
 import com.epam.izh.rd.online.exception.UnknownOperationException;
+import lombok.AllArgsConstructor;
 
 import java.text.DecimalFormat;
 
+@AllArgsConstructor
 public class ProcessCalculateService {
     private final CalculateService calculateService;
     private final ParsingService parsingService;
@@ -30,7 +32,7 @@ public class ProcessCalculateService {
                 UnknownOperationException exception) {
             notificationService.showMessage(ConsoleNotificationService.ERROR, exception.getMessage());
         } catch (Exception exception) {
-            notificationService.showMessage(ConsoleNotificationService.ERROR,ConsoleNotificationService.EXAMPLE_TEXT);
+            notificationService.showMessage(ConsoleNotificationService.ERROR, ConsoleNotificationService.EXAMPLE_TEXT);
         }
     }
 

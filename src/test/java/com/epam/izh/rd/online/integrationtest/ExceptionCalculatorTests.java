@@ -14,7 +14,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static net.obvj.junit.utils.matchers.AdvancedMatchers.throwsException;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@DisplayName("Class for testing exception results of text calculator")
+@DisplayName("Tests for exception results of text calculator")
 class ExceptionCalculatorTests {
     private static CalculateService calculateService;
     private static ParsingService parsingService;

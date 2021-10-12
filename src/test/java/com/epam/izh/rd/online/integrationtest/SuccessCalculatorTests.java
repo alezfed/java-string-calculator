@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.closeTo;
 
-@DisplayName("Class for testing success results of text calculator")
+@DisplayName("Tests for success results of text calculator")
 class SuccessCalculatorTests {
     private static final double precision = 1E-6;
     private static CalculateService calculateService;

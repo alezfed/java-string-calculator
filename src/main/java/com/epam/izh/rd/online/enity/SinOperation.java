@@ -11,7 +11,7 @@ public class SinOperation extends Operation implements Calculable {
     @Override
     public double getResult(double... args) {
         if (args.length != 1) {
-            throw new IllegalNumberArgumentException("Неверное число агрументов в функции sin.");
+            throw new IllegalNumberArgumentException("Неверное число аргументов в функции sin.");
         }
         return Math.sin(args[0]);
     }

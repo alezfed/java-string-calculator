@@ -102,7 +102,7 @@ public class SimpleParsingService implements ParsingService {
                 Operation lastOperation;
                 while (true) {
                     if (operationStack.isEmpty()) {
-                        throw new IllegalExpressionException("Неверая расстановка скобок в выражении.");
+                        throw new IllegalExpressionException("Неверная расстановка скобок в выражении.");
                     }
                     lastOperation = operationStack.pop();
                     if (OperationType.OPENING_BRACE.getOperation().equals(lastOperation)) {
